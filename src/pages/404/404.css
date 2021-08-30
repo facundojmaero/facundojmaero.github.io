@@ -1,0 +1,11 @@
+.not-found-page {
+  max-width: var(--post-width);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.not-found-page__title {
+  margin-top: 4rem;
+}

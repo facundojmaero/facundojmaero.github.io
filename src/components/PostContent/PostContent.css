@@ -1,0 +1,73 @@
+.post-content {
+  margin: auto;
+  /* max-width: var(--post-width); */
+  /* padding: 0 2rem; */
+}
+
+.post-content > * {
+  padding: 0 2rem;
+  max-width: var(--post-width);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post-content > p > .gatsby-highlight {
+  max-width: var(--code-width);
+  width: 100%;
+  padding: 0px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content > ol,
+.post-content > ul {
+  padding: 0 2.5rem;
+}
+
+@media (min-width: 952px) {
+  .gatsby-highlight {
+    padding: 0 1rem;
+    max-width: calc(952px);
+    margin: 0 auto;
+  }
+
+  .gatsby-highlight pre[class^="language-"] {
+    border-radius: 6px !important;
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+  }
+}
+
+.gatsby-highlight {
+  max-width: var(--code-width);
+  width: 100%;
+  padding: 0px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gatsby-highlight-code-line {
+  /* background-color: rgba(150, 228, 87, 0.15); */
+  display: block;
+}
+
+.gatsby-highlight-code-line {
+  background-color: rgb(25, 41, 53);
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.2em;
+}

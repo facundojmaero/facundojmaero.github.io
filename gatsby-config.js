@@ -8,6 +8,19 @@ module.exports = {
     author: config.author,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-2Y1KD3J5CG", // Google Analytics / GA
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
@@ -41,28 +54,5 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-remark-reading-time",
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-2Y1KD3J5CG", // Google Analytics / GA
-        ],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: false,
-          // Setting this parameter is also optional
-          respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          // exclude: ["/preview/**", "/do-not-track/me/too/"],
-        },
-      },
-    },
   ],
 };
